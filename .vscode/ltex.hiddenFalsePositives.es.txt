@@ -1,0 +1,2 @@
+{"rule":"SPANISH_WORD_REPEAT_RULE","sentence":"^\\QCando Cando Elber Saul\\E$"}
+{"rule":"SPANISH_WORD_REPEAT_RULE","sentence":"^\\QCando Cando Elber Saúl\\E$"}
