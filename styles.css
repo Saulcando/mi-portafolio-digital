@@ -106,30 +106,56 @@ body {
     justify-content: center;
 }
 
+/* Contenedor del sello */
 .escudo-unach {
-    font-size: 3rem;
-    color: #d69e2e;
-    margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center;     /* Centra la imagen verticalmente */
+    width: 100%;
+    margin-top: -20px;        /* Ajusta este valor para subir o bajar el sello */
+    margin-bottom: 0px;     /* Espacio entre el sello y el título */
 }
 
-.escudo-unach span {
-    font-family: var(--fuente-titulos);
-    font-size: 1rem;
-    letter-spacing: 4px;
-    color: #fff;
-    margin-top: 5px;
+/* La imagen del sello */
+.escudo-unach img {
+    width: 70px;             /* Tamaño del sello (puedes subirlo a 100px si lo quieres más grande) */
+    height: 85px;            /* Debe ser igual al width para que sea un círculo perfecto */
+    object-fit: contain;     /* Evita que la imagen se estire o se aplaste */
+    flex-shrink: 0;          /* Impide que el diseño flexible deforme la imagen */
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.5)); /* Sombra para que resalte en el fondo azul */
 }
 
-.contenido-tapa h1 {
-    font-family: var(--fuente-titulos);
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-    line-height: 1.2;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+/* Clases de la fuente */
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Ajustes para el Título Principal (PORTAFOLIO DIGITAL) */
+span.dm-serif-display-regular-italic {
+    font-size: 25px; /* Tamaño grande */
+    line-height: 1.1; /* Junta un poco las dos líneas */
+    color: #c2c6e9da; /* Blanco */
+    letter-spacing: 2px; /* Un poco de espacio entre letras */
+    text-shadow: 2px 4px 5px rgba(0,0,0,0.4); /* Sombra para que resalte en el azul */
+    margin-bottom: 20px;
+}
+
+/* Ajustes para el nombre de la Universidad */
+span.dm-serif-display-regular {
+    display: block;
+    font-size: 1rem; /* Un poco más pequeño */
+    letter-spacing: 3px; /* Más espacio entre letras para que se vea imponente */
+    text-transform: uppercase; /* Todo en mayúsculas */
+    color: #e2e8f0; /* Un blanco ligeramente grisáceo */
+    margin-bottom: 10px;
 }
 
 .contenido-tapa h2 {
@@ -144,7 +170,7 @@ body {
     width: 60%;
     height: 1px;
     background: #d69e2e;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .subtapa {
@@ -168,30 +194,33 @@ body {
 
 /* Botón Abrir Libro */
 .btn-abrir-libro {
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* Cambiado de absolute a relative */
+    z-index: 10; /* 👈 ESTO ES CLAVE: Hace que el botón esté "más adelante" que el borde */
+    margin-top: -40px;   /* Espacio con los datos de arriba */
     background: #d69e2e;
     color: #1a202c;
     border: none;
-    padding: 12px 30px;
+    padding: 6px 30px;
     font-size: 1.1rem;
     font-family: var(--fuente-texto);
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(214, 158, 46, 0.4);
-    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra ajustada */
+    transition: all 0.5s;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    width: 60%; /* Aquí está el ancho */
+    margin-left: auto; /* Lo centra */
+    margin-right: auto; /* Lo centra */
 }
 
 .btn-abrir-libro:hover {
     background: #ecc94b;
-    transform: translateX(-50%) translateY(-3px);
-    box-shadow: 0 8px 20px rgba(214, 158, 46, 0.6);
+    transform: scale(1.05); /* Hace que el botón crezca un 5% */
+    box-shadow: 0 8px 20px rgba(0,0,0, 0.4); /* (Opcional) Hace que la sombra crezca un poco para dar más realismo */
 }
 
 /* Animación de apertura */
