@@ -1,195 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio Digital - Física Térmica | UNACH</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital - Física Térmica</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Fondo de escritorio -->
-    <div class="desktop-bg"></div>
-
-    <!-- LIBRO CERRADO (Portada) -->
-    <div class="libro-cerrado" id="libroCerrado">
-      <div class="tapa-libro">
-        <div class="lomo"></div>
-        <div class="contenido-tapa">
-          <div class="escudo-unach">
-            <img src="sello-unach.png" alt="Sello UNACH" />
-          </div>
-          <span class="dm-serif-display-regular"
-            >Universidad Nacional de Chimborazo</span
-          >
-          <span class="dm-serif-display-regular-italic">PORTAFOLIO<br />DIGITAL</span>
-          <h2>FÍSICA<br />TÉRMICA</h2>
-          <div class="linea-decorativa"></div>
-          <p class="subtapa">EVIDENCIAS DE APRENDIZAJE</p>
-          <div class="autor-libro">
-            <p><strong>Estudiante:</strong> Cando Cando Elber Saúl</p>
-            <p><strong>Docente:</strong> Dra. Narcisa Sánchez</p>
-            <p><strong>Período:</strong> 2026-2S</p>
-          </div>
-        </div>
-      </div>
-      <button class="btn-abrir-libro" onclick="abrirLibro()">
-        <i class="fa-solid fa-book-open"></i> Abrir Portafolio
-      </button>
-    </div>
-
-    <!-- LIBRO ABIERTO (Contenido) -->
-    <div class="libro-abierto oculto" id="libroAbierto">
-      <!-- Botón para cerrar -->
-      <button class="btn-cerrar-libro" onclick="cerrarLibro()">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <!-- Página Izquierda: Índice e Info General -->
-      <div class="pagina pagina-izquierda">
-        <div class="contenido-pagina">
-          <div class="info-general">
-            <h2>
-              <i class="fa-solid fa-graduation-cap"></i> Información General
-            </h2>
-            <div class="datos-libro">
-              <p><strong>Universidad:</strong> UNACH</p>
-              <p>
-                <strong>Carrera:</strong> Pedagogía de las Ciencias
-                Experimentales
-              </p>
-              <p><strong>Asignatura:</strong> Física Térmica</p>
-              <p><strong>Docente:</strong> Dra. Narcisa Sánchez Salcan</p>
-              <p><strong>Nivel:</strong> Quinto semestre</p>
-              <p><strong>Período:</strong> 2026-2S</p>
-              <p class="editable-container">
-                <strong>Estudiante:</strong>
-                <span class="editable" ondblclick="editarTexto(this)"
-                  >Cando Cando Elber Saúl</span
-                >
-              </p>
-              <p class="editable-container">
-                <strong>Cédula:</strong>
-                <span class="editable" ondblclick="editarTexto(this)"
-                  >060548606-7</span
-                >
-              </p>
+    <!-- ENCABEZADO INSTITUCIONAL -->
+    <header class="header">
+        <div class="header-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Escudo_UNACH.png/120px-Escudo_UNACH.png" alt="Logo UNACH" class="logo">
+            <div class="header-text">
+                <h1>UNIVERSIDAD NACIONAL DE CHIMBORAZO</h1>
+                <p>Facultad de Ciencias de la Educación, Humanas y Tecnologías</p>
+                <p>Carrera de Pedagogía de las Ciencias Experimentales: Matemáticas y la Física</p>
             </div>
-          </div>
-
-          <h2 class="titulo-indice">
-            <i class="fa-solid fa-list"></i> Índice del Portafolio
-          </h2>
-          <ul class="indice-lista">
-            <li onclick="mostrarCarpeta(1)">
-              <span>01</span> Talleres Pedagógicos
-            </li>
-            <li onclick="mostrarCarpeta(2)">
-              <span>02</span> Lecciones y Evaluaciones
-            </li>
-            <li onclick="mostrarCarpeta(3)">
-              <span>03</span> Cuaderno de Teoría
-            </li>
-            <li onclick="mostrarCarpeta(4)">
-              <span>04</span> Guías de Laboratorio
-            </li>
-            <li onclick="mostrarCarpeta(5)">
-              <span>05</span> Informes de Laboratorio
-            </li>
-            <li onclick="mostrarCarpeta(6)">
-              <span>06</span> Actividades de Investigación
-            </li>
-            <li onclick="mostrarCarpeta(7)">
-              <span>07</span> Proyecto Formativo
-            </li>
-            <li onclick="mostrarCarpeta(8)">
-              <span>08</span> Recursos Digitales
-            </li>
-            <li onclick="mostrarCarpeta(9)"><span>09</span> Reflexiones</li>
-          </ul>
         </div>
-      </div>
+    </header>
 
-      <!-- Página Derecha: Contenido Dinámico -->
-      <div class="pagina pagina-derecha">
-        <div class="contenido-pagina" id="contenidoDinamico">
-          <!-- El contenido se carga con JS -->
-          <div class="bienvenida-libro">
-            <i class="fa-solid fa-hand-pointer"></i>
-            <h3>Selecciona una carpeta del índice</h3>
-            <p>
-              Haz clic en cualquier elemento de la página izquierda para
-              visualizar las evidencias requeridas.
-            </p>
-          </div>
+    <!-- PORTADA / INFORMACIÓN GENERAL (CARPETA 00) -->
+    <section class="hero" id="info-general">
+        <div class="hero-container">
+            <h2>PORTAFOLIO DIGITAL</h2>
+            <h3>FÍSICA TÉRMICA</h3>
+            <div class="badge">EVIDENCIAS DE APRENDIZAJE</div>
+            
+            <div class="info-grid">
+                <div class="info-item"><strong>Estudiante:</strong> <span>[Tu Nombre Aquí]</span></div>
+                <div class="info-item"><strong>Cédula:</strong> <span>[Tu Cédula]</span></div>
+                <div class="info-item"><strong>Docente:</strong> <span>Dra. Narcisa Sánchez Salcan</span></div>
+                <div class="info-item"><strong>Nivel académico:</strong> <span>Quinto semestre</span></div>
+                <div class="info-item"><strong>Período académico:</strong> <span>2026–2S</span></div>
+            </div>
+
+            <a href="#carpetas" class="btn-principal">HAGA CLIC AQUÍ PARA ACCEDER AL PORTAFOLIO DIGITAL</a>
         </div>
-      </div>
+    </section>
 
-      <!-- Separadores (Pestañas del libro) -->
-      <div class="separadores">
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(0)"
-          style="background: #1a365d"
-        ></div>
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(1)"
-          style="background: #2b6cb0"
-        ></div>
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(2)"
-          style="background: #3182ce"
-        ></div>
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(3)"
-          style="background: #4299e1"
-        ></div>
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(4)"
-          style="background: #e53e3e"
-        ></div>
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(5)"
-          style="background: #dd6b20"
-        ></div>
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(6)"
-          style="background: #d69e2e"
-        ></div>
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(7)"
-          style="background: #38a169"
-        ></div>
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(8)"
-          style="background: #319795"
-        ></div>
-        <div
-          class="separador"
-          onclick="mostrarCarpeta(9)"
-          style="background: #805ad5"
-        ></div>
-      </div>
-    </div>
+    <!-- SECCIÓN DE CARPETAS -->
+    <main class="container" id="carpetas">
+        <h2 class="section-title">Índice General del Portafolio</h2>
+        <p class="section-subtitle">Haz clic en cada carpeta para visualizar o descargar las evidencias académicas.</p>
+
+        <div class="grid-carpetas">
+            <!-- Carpeta 01 -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <h3>01. Talleres Pedagógicos Grupales</h3>
+                <p>Actividades colaborativas desarrolladas en clase.</p>
+                <a href="#" class="btn-card" target="_blank">Abrir Carpeta</a>
+            </div>
+
+            <!-- Carpeta 02 -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-file-signature"></i></div>
+                <h3>02. Lecciones y Evaluaciones</h3>
+                <p>Evaluaciones escritas, individuales y grupales.</p>
+                <a href="#" class="btn-card" target="_blank">Abrir Carpeta</a>
+            </div>
+
+            <!-- Carpeta 03 -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                <h3>03. Cuaderno de Teoría y Apuntes</h3>
+                <p>Conceptos, leyes, fórmulas y organizadores gráficos.</p>
+                <a href="#" class="btn-card" target="_blank">Abrir Carpeta</a>
+            </div>
+
+            <!-- Carpeta 04 -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-flask"></i></div>
+                <h3>04. Guías de Laboratorio</h3>
+                <p>Guías proporcionadas para las prácticas experimentales.</p>
+                <a href="#" class="btn-card" target="_blank">Abrir Carpeta</a>
+            </div>
+
+            <!-- Carpeta 05 -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                <h3>05. Informes de Laboratorio</h3>
+                <p>Informes elaborados tras cada práctica experimental.</p>
+                <a href="#" class="btn-card" target="_blank">Abrir Carpeta</a>
+            </div>
+
+            <!-- Carpeta 06 -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-search"></i></div>
+                <h3>06. Actividades de Investigación</h3>
+                <p>Investigaciones, infografías y pósteres académicos.</p>
+                <a href="#" class="btn-card" target="_blank">Abrir Carpeta</a>
+            </div>
+
+            <!-- Carpeta 07 -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>07. Proyecto de Investigación Formativa</h3>
+                <p>Evidencias del proyecto desarrollado en el período.</p>
+                <a href="#" class="btn-card" target="_blank">Abrir Carpeta</a>
+            </div>
+
+            <!-- Carpeta 08 -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>08. Recursos Digitales y Simulaciones</h3>
+                <p>Laboratorios virtuales y actividades digitales.</p>
+                <a href="#" class="btn-card" target="_blank">Abrir Carpeta</a>
+            </div>
+
+            <!-- Carpeta 09 -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-brain"></i></div>
+                <h3>09. Reflexiones y Mejora del Aprendizaje</h3>
+                <p>Reflexión personal sobre el proceso de aprendizaje.</p>
+                <a href="#" class="btn-card" target="_blank">Abrir Carpeta</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p><em>Repositorio digital de evidencias académicas de la asignatura</em></p>
+        <p>Riobamba - Ecuador | 2026</p>
+        <p class="footer-small">Creado por [Tu Nombre]</p>
+    </footer>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
