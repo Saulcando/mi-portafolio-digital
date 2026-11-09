@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carpeta 01 - Talleres</title>
-    <!-- Las rutas con ../../ suben dos niveles hasta la carpeta principal -->
     <link rel="stylesheet" href="../../styles.css" />
     <link
       rel="stylesheet"
@@ -34,95 +33,393 @@
         Actividades colaborativas desarrolladas durante las clases.
       </p>
 
+      <hr class="separador" />
+
       <!-- ============================================================
-           TALLER 1  (copia todo este bloque para agregar el Taller 2)
+           TALLER 1
            ============================================================ -->
       <div class="taller-card">
-        <h3>
-          Taller 1: Transferencia de calor por conducción, convección y
-          radiación
-        </h3>
+        <h3>Taller 1: Concepto de temperatura</h3>
 
-        <div class="taller-info">
-          <p>
-            <strong>1. Título de la actividad:</strong> Transferencia de calor
-            por conducción, convección y radiación
-          </p>
-          <p><strong>2. Fecha de realización:</strong> 28 de octubre de 2026</p>
-          <p>
-            <strong>3. Integrantes del grupo:</strong> Saúl Cando, Gabriela
-            Quishpi y Ruth Suárez
-          </p>
-          <p>
-            <strong>4. Objetivo del taller:</strong> Comparar la evolución de la
-            temperatura en cuatro materiales del modelo (metal, piedra, fibra de
-            vidrio y madera) y argumentar cómo el comportamiento observado se
-            relaciona con su uso como conductores o aislantes térmicos.
-          </p>
-          <p>
-            <strong>5. Desarrollo de las actividades:</strong> Se ejecutó el
-            simulador "Conduction: Heat Conduction Through Materials" con el
-            extremo izquierdo a 50,0 °C, registrando las temperaturas de las
-            sondas T1 (metal), T2 (piedra), T3 (fibra de vidrio) y T4 (madera)
-            en dos instantes de tiempo (t1 ≈ 400 s y t2 ≈ 800 s).
-            Posteriormente, se analizaron las diferencias de calentamiento con
-            base en la ley de Fourier y la difusividad térmica.
-          </p>
-          <p>
-            <strong>6. Conclusiones:</strong> Se comprobó que el metal (T1) se
-            calienta más rápido, alcanzando 49,6 °C, mientras que la madera (T4)
-            fue la más lenta con 11,2 °C. Esto demuestra que el metal es un buen
-            conductor térmico y la madera/fibra de vidrio son aislantes.
-          </p>
-          <p>
-            <strong>7. Evidencias de participación:</strong> Se incluye el
-            documento con la tabla comparativa, gráficas de temperatura y las
-            capturas de pantalla del simulador ejecutado.
-          </p>
+        <!-- Contenedor principal en dos columnas -->
+        <div
+          style="
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+          "
+        >
+          <!-- COLUMNA IZQUIERDA: Puntos 1 al 6 -->
+          <div class="taller-info" style="flex: 2; min-width: 300px">
+            <p>
+              <strong>1. Título de la actividad:</strong> Concepto de
+              temperatura
+            </p>
+            <p>
+              <strong>2. Fecha de realización:</strong> 07 de octubre de 2026
+            </p>
+            <p>
+              <strong>3. Integrantes del grupo:</strong> Saúl Cando, Luis Ramos,
+              Viviana Espinel, Katheryn Yánez
+            </p>
+            <p>
+              <strong>4. Objetivo del taller:</strong> Ordenar objetos según su
+              temperatura, justificar la respuesta con base en el estado de la
+              materia y reflexionar sobre la definición de temperatura a partir
+              del movimiento molecular.
+            </p>
+            <p>
+              <strong>5. Desarrollo de las actividades:</strong> Se ordenaron
+              los objetos (A, D, C, B) de menor a mayor temperatura considerando
+              el hielo, el cuerpo humano, el metal y el agua hirviendo. Luego se
+              justificó la respuesta explicando que el hielo está a 0 °C o
+              menos, el cuerpo humano a 36-37 °C, el metal absorbe radiación
+              térmica y el agua hirviendo alcanza los 100 °C a nivel del mar.
+              Finalmente se reflexionó sobre qué objeto resultaría más incómodo
+              tocar y se redactó una definición propia de temperatura.
+            </p>
+            <p>
+              <strong>6. Conclusiones:</strong> La temperatura es la medida del
+              movimiento de las moléculas de un objeto: si se mueven rápido, el
+              objeto está caliente; si se mueven despacio, está frío. El agua
+              hirviendo es el objeto más riesgoso de tocar por su alta
+              temperatura.
+            </p>
+          </div>
+
+          <!-- COLUMNA DERECHA: Punto 7 y la Foto -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              max-width: 350px;
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+            "
+          >
+            <p style="margin: 0">
+              <strong>7. Evidencias de participación:</strong>
+            </p>
+            <!-- Reemplaza 'anexos/tu_foto.jpg' con la ruta real de tu imagen -->
+            <img
+              src="anexos/anexo_de_concepto.jpg"
+              alt="Evidencia de participación"
+              style="
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                object-fit: cover;
+              "
+            />
+          </div>
         </div>
 
-        <!-- ===== BLOQUE: PDF VISIBLE EN LA MISMA PÁGINA ===== -->
-        <div class="visor-pdf">
-          <iframe src="taller1.pdf" title="Taller 1 - PDF completo"></iframe>
+        <!-- Visor del PDF abajo a todo lo ancho -->
+        <div class="visor-pdf" style="margin-top: 1.5rem">
+          <iframe
+            src="concepto_temperatura.pdf"
+            title="Taller 2 - Concepto de temperatura"
+            style="width: 100%; height: 400px"
+          ></iframe>
           <div class="pdf-acciones">
             <span>¿No se ve el documento en tu celular?</span>
-            <a href="taller1.pdf" download><i class="fas fa-download"></i> Descargar PDF</a>
-            <a href="taller1.pdf"><i class="fas fa-up-right-from-square"></i> Abrir en pantalla completa</a>
+            <a href="concepto_temperatura.pdf" download
+              ><i class="fas fa-download"></i> Descargar PDF</a
+            >
+            <a href="concepto_temperatura.pdf"
+              ><i class="fas fa-up-right-from-square"></i> Abrir en pantalla
+              completa</a
+            >
           </div>
         </div>
-
-        <!-- ===== EJEMPLOS DE OTROS BLOQUES (quita las marcas de comentario para usarlos) =====
-
-        TEXTO LIBRE:
-        <div class="bloque-texto">
-          <h4>Título del apartado</h4>
-          <p>Escribe aquí tu párrafo.</p>
-        </div>
-
-        IMAGEN (guarda la foto en documentos/01_Talleres/imagenes/):
-        <figure class="bloque-imagen">
-          <img src="imagenes/captura-simulador.png" alt="Captura del simulador" />
-          <figcaption>Figura 1. Captura del simulador de conducción.</figcaption>
-        </figure>
-
-        VIDEO DE YOUTUBE (cambia ID_DEL_VIDEO):
-        <div class="bloque-video">
-          <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO" allowfullscreen></iframe>
-        </div>
-
-        OTRO PDF:
-        <div class="visor-pdf">
-          <iframe src="otro-archivo.pdf" title="Otro PDF"></iframe>
-          <div class="pdf-acciones">
-            <a href="otro-archivo.pdf" download>Descargar PDF</a>
-          </div>
-        </div>
-
-        LÍNEA SEPARADORA:
-        <hr class="separador" />
-        ===== -->
       </div>
-      <!-- FIN TALLER 1 -->
+
+      <!-- ============================================================
+           TALLER 2 (termómetro_grupo_5.pdf)
+           ============================================================ -->
+      <div class="taller-card">
+        <h3>Taller 2: Termómetros</h3>
+        <!-- Contenedor principal en dos columnas -->
+        <div
+          style="
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+          "
+        >
+          <!-- COLUMNA IZQUIERDA: Puntos 1 al 6 -->
+          <div class="taller-info" style="flex: 2; min-width: 300px">
+            <p><strong>1. Título de la actividad:</strong> Termómetros</p>
+            <p>
+              <strong>2. Fecha de realización:</strong> 08 de octubre de 2026
+            </p>
+            <p>
+              <strong>3. Integrantes del grupo:</strong> Ledy Asaquibay, Viviana
+              Espinel, Elcy Cando y Saúl Cando (Grupo N° 5)
+            </p>
+            <p>
+              <strong>4. Objetivo del taller:</strong> Definir qué es un
+              termómetro y describir los diferentes tipos de termómetros, sus
+              principios de funcionamiento y sus aplicaciones.
+            </p>
+            <p>
+              <strong>5. Desarrollo de las actividades:</strong> Se investigó el
+              concepto de termómetro como instrumento que mide la temperatura
+              aprovechando el principio cero de la termodinámica. Se
+              describieron los tipos: termómetro de mercurio, digital,
+              infrarrojo, de alcohol, bimetálico y de Galileo, con sus
+              características, ventajas y usos.
+            </p>
+            <p>
+              <strong>6. Conclusiones:</strong> Existen diversos tipos de
+              termómetros según el principio físico que utilicen (dilatación,
+              radiación infrarroja, sensores electrónicos, bimetal). Cada uno se
+              emplea en contextos específicos: salud, industria, ambiente o
+              laboratorio.
+            </p>
+          </div>
+
+          <!-- COLUMNA DERECHA: Punto 7 y la Foto -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              max-width: 350px;
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+            "
+          >
+            <p style="margin: 0">
+              <strong>7. Evidencias de participación:</strong>
+            </p>
+            <!-- Reemplaza 'anexos/tu_foto.jpg' con la ruta real de tu imagen -->
+            <img
+              src="anexos/anexo_termometro.jpg"
+              alt="Evidencia de participación"
+              style="
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                object-fit: cover;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="visor-pdf">
+          <iframe
+            src="termómetro_grupo_5.pdf"
+            title="Taller 3 - Termómetros"
+          ></iframe>
+          <div class="pdf-acciones">
+            <span>¿No se ve el documento en tu celular?</span>
+            <a href="termómetro_grupo_5.pdf" download
+              ><i class="fas fa-download"></i> Descargar PDF</a
+            >
+            <a href="termómetro_grupo_5.pdf"
+              ><i class="fas fa-up-right-from-square"></i> Abrir en pantalla
+              completa</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <hr class="separador" />
+
+      <!-- ============================================================
+           TALLER 3 (Taller_pedagogico_grupal_3.pdf)
+           ============================================================ -->
+      <div class="taller-card">
+        <h3>Taller 3: Taller Pedagógico Grupal N° 3</h3>
+        <!-- Contenedor principal en dos columnas -->
+        <div
+          style="
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+          "
+        >
+          <!-- COLUMNA IZQUIERDA: Puntos 1 al 6 -->
+          <div class="taller-info" style="flex: 2; min-width: 300px">
+            <p>
+              <strong>1. Título de la actividad:</strong> Taller Pedagógico
+              Grupal N° 3
+            </p>
+            <p>
+              <strong>2. Fecha de realización:</strong> 28 de octubre de 2026
+            </p>
+            <p>
+              <strong>3. Integrantes del grupo:</strong> Saúl Cando, Gabriela
+              Quishpi y Ruth Suárez
+            </p>
+            <p>
+              <strong>4. Objetivo del taller:</strong> Desarrollar las
+              actividades propuestas en el taller pedagógico grupal N° 3,
+              aplicando los conceptos de física térmica trabajados en clase.
+            </p>
+            <p>
+              <strong>5. Desarrollo de las actividades:</strong> Se resolvieron
+              las consignas del taller de forma colaborativa, aplicando los
+              conceptos teóricos y procedimientos experimentales
+              correspondientes al tema asignado.
+            </p>
+            <p>
+              <strong>6. Conclusiones:</strong> El desarrollo del taller
+              permitió consolidar los aprendizajes del grupo y reforzar la
+              aplicación práctica de los contenidos de física térmica.
+            </p>
+          </div>
+
+          <!-- COLUMNA DERECHA: Punto 7 y la Foto -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              max-width: 350px;
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+            "
+          >
+            <p style="margin: 0">
+              <strong>7. Evidencias de participación:</strong>
+            </p>
+            <!-- Reemplaza 'anexos/tu_foto.jpg' con la ruta real de tu imagen -->
+            <img
+              src="anexos/anexo_conversiones.jpg"
+              alt="Evidencia de participación"
+              style="
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                object-fit: cover;
+              "
+            />
+          </div>
+        </div>
+
+        <div class="visor-pdf">
+          <iframe
+            src="Taller_pedagogico_grupal_3.pdf"
+            title="Taller 4 - Taller Pedagógico Grupal N° 3"
+          ></iframe>
+          <div class="pdf-acciones">
+            <span>¿No se ve el documento en tu celular?</span>
+            <a href="Taller_pedagogico_grupal_3.pdf" download
+              ><i class="fas fa-download"></i> Descargar PDF</a
+            >
+            <a href="Taller_pedagogico_grupal_3.pdf"
+              ><i class="fas fa-up-right-from-square"></i> Abrir en pantalla
+              completa</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           TALLER 4 (Cambios de Fase)
+           ============================================================ -->
+      <div class="taller-card">
+        <h3>Taller 4: Cambios de Fase</h3>
+
+        <!-- Contenedor principal en dos columnas -->
+        <div
+          style="
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+          "
+        >
+          <!-- COLUMNA IZQUIERDA: Puntos 1 al 6 -->
+          <div class="taller-info" style="flex: 2; min-width: 300px">
+            <p><strong>1. Título de la actividad:</strong> Cambios de Fase</p>
+            <p>
+              <strong>2. Fecha de realización:</strong> 28 de octubre de 2026
+            </p>
+            <p>
+              <strong>3. Integrantes del grupo:</strong> Asaquibay Leidy, Cando
+              Saúl, Guamán Evelyn, Ramos Alexander (Grupo 6)
+            </p>
+            <p>
+              <strong>4. Objetivo del taller:</strong> Comprender los cambios de
+              fase de la materia, diferenciar los procesos endotérmicos y
+              exotérmicos, y aplicar el concepto de calor latente para calcular
+              la energía transferida durante la fusión y vaporización.
+            </p>
+            <p>
+              <strong>5. Desarrollo de las actividades:</strong> Se explicaron
+              los estados de la materia y las transiciones entre ellos (fusión,
+              solidificación, vaporización, condensación, sublimación y
+              deposición). Se analizó la diferencia entre calor sensible y calor
+              latente, aplicando la fórmula Q = mL para resolver un problema
+              práctico de fusión de hielo. Finalmente, se interpretó la curva de
+              calentamiento del agua y se expusieron aplicaciones cotidianas
+              como la formación de escarcha y la ebullición.
+            </p>
+            <p>
+              <strong>6. Conclusiones:</strong> Los cambios de fase son
+              transformaciones físicas que dependen del intercambio de energía y
+              la presión. Durante una transición en equilibrio, la energía se
+              emplea en cambiar el estado y no en variar la temperatura. El
+              calor latente permite calcular la energía necesaria para fundir,
+              congelar, vaporizar o condensar una sustancia.
+            </p>
+          </div>
+
+          <!-- COLUMNA DERECHA: Punto 7 y la Foto -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              max-width: 350px;
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+            "
+          >
+            <p style="margin: 0">
+              <strong>7. Evidencias de participación:</strong>
+            </p>
+            <!-- Reemplaza 'anexos/tu_foto.jpg' con la ruta real de tu imagen o captura de la diapositiva -->
+            <img
+              src="anexos/tu_foto.jpg"
+              alt="Evidencia de participación - Cambios de Fase"
+              style="
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                object-fit: cover;
+              "
+            />
+          </div>
+        </div>
+
+        <!-- Visor del PDF/PPT abajo a todo lo ancho -->
+        <!-- Si lo convertiste a PDF, pon el nombre aquí. Si no, cambia el iframe por un enlace o deja el nombre del archivo -->
+        <div class="visor-pdf" style="margin-top: 1.5rem">
+          <iframe
+            src="Diapositivas_Grupo_6_Cambios de fase.pdf"
+            title="Taller 4 - Cambios de Fase"
+            style="width: 100%; height: 500px"
+          ></iframe>
+          <div class="pdf-acciones">
+            <span>¿No se ve el documento en tu celular?</span>
+            <a href="Diapositivas_Grupo_6_Cambios de fase.pdf" download
+              ><i class="fas fa-download"></i> Descargar PDF</a
+            >
+            <a href="Diapositivas_Grupo_6_Cambios_de_fase.pdf"
+              ><i class="fas fa-up-right-from-square"></i> Abrir en pantalla
+              completa</a
+            >
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>

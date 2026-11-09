@@ -9,6 +9,37 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <style>
+      /* Estilos para el diseño de tarjetas */
+      .taller-card {
+        background: #f5edf9;
+        border-radius: 15px;
+        padding: 2rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+      .taller-card h3 {
+        text-align: center;
+        color: #333;
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 1rem;
+      }
+      .taller-header-info {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #444;
+        font-size: 0.95rem;
+      }
+      .taller-header-info p {
+        margin: 0.3rem 0;
+      }
+      .visor-pdf iframe {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -29,65 +60,159 @@
 
     <main class="container" style="margin-top: 0">
       <h2 class="section-title">Carpeta 05: Informes de Laboratorio</h2>
-      <p class="section-subtitle">Informes elaborados tras cada práctica experimental.</p>
+      <p class="section-subtitle">
+        Informes elaborados tras cada práctica experimental (Presenciales y
+        Virtuales).
+      </p>
 
+      <!-- ============================================================
+           SECCIÓN 1: INFORMES PRESENCIALES
+           ============================================================ -->
+      <h2
+        style="
+          margin-top: 3rem;
+          margin-bottom: 1.5rem;
+          color: #2c3e50;
+          border-left: 5px solid #7b2cbf;
+          padding-left: 10px;
+        "
+      >
+        <i class="fas fa-flask"></i> Informes de Laboratorio Presenciales
+      </h2>
+
+      <!-- INFORME PRESENCIAL 1 -->
       <div class="taller-card">
+        <h3>Informe Presencial N° 1: Puntos fijos del termómetro</h3>
 
-        <h3>Informe de laboratorio presencial Nº2</h3>
+        <div class="taller-header-info">
+          <p><strong>Integrantes:</strong> Cando Cando Elber Saúl</p>
+          <p><strong>Docente:</strong> Dra. Narcisa Sánchez S.</p>
+        </div>
+
         <div class="visor-pdf">
-          <iframe src="Informes_lab_presencial/informe_lab_presencial_2.pdf" title="Informe de laboratorio presencial Nº2"></iframe>
-          <div class="pdf-acciones">
-            <span>¿No se ve el documento en tu celular?</span>
-            <a href="Informes_lab_presencial/informe_lab_presencial_2.pdf" download><i class="fas fa-download"></i> Descargar PDF</a>
-            <a href="Informes_lab_presencial/informe_lab_presencial_2.pdf"><i class="fas fa-up-right-from-square"></i> Abrir en pantalla completa</a>
+          <iframe
+            src="Informes_lab_presencial/Informe_lab_presencial_1.pdf"
+            title="Informe Presencial 1"
+            style="width: 100%; height: 500px"
+          ></iframe>
+          <div
+            class="pdf-acciones"
+            style="
+              margin-top: 0.5rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              font-size: 0.85rem;
+            "
+          >
+            <a
+              href="Informes_lab_presencial/Informe_lab_presencial_1.pdf"
+              download
+              ><i class="fas fa-download"></i> Descargar PDF</a
+            >
+            <a
+              href="Informes_lab_presencial/Informe_lab_presencial_1.pdf"
+              target="_blank"
+              ><i class="fas fa-up-right-from-square"></i> Pantalla completa</a
+            >
           </div>
         </div>
-        <hr class="separador" />
+      </div>
 
-        <h3>Informe de laboratorio presencial: Equilibrio térmico</h3>
+      <!-- INFORME PRESENCIAL 2 -->
+      <div class="taller-card">
+        <h3>Informe Presencial N° 2: Equilibrio térmico</h3>
+
+        <div class="taller-header-info">
+          <p><strong>Integrantes:</strong> Cando Cando Elber Saúl</p>
+          <p><strong>Docente:</strong> Dra. Narcisa Sánchez S.</p>
+        </div>
+
         <div class="visor-pdf">
-          <iframe src="Informes_lab_presencial/informe_lab_presencial_equilibrio_termico.pdf" title="Informe de laboratorio presencial: Equilibrio térmico"></iframe>
-          <div class="pdf-acciones">
-            <span>¿No se ve el documento en tu celular?</span>
-            <a href="Informes_lab_presencial/informe_lab_presencial_equilibrio_termico.pdf" download><i class="fas fa-download"></i> Descargar PDF</a>
-            <a href="Informes_lab_presencial/informe_lab_presencial_equilibrio_termico.pdf"><i class="fas fa-up-right-from-square"></i> Abrir en pantalla completa</a>
+          <iframe
+            src="Informes_lab_presencial/informe_lab_presencial_2.pdf"
+            title="Informe Presencial 2"
+            style="width: 100%; height: 500px"
+          ></iframe>
+          <div
+            class="pdf-acciones"
+            style="
+              margin-top: 0.5rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              font-size: 0.85rem;
+            "
+          >
+            <a
+              href="Informes_lab_presencial/informe_lab_presencial_2.pdf"
+              download
+              ><i class="fas fa-download"></i> Descargar PDF</a
+            >
+            <a
+              href="Informes_lab_presencial/informe_lab_presencial_2.pdf"
+              target="_blank"
+              ><i class="fas fa-up-right-from-square"></i> Pantalla completa</a
+            >
           </div>
         </div>
+      </div>
 
-        <!-- Los informes virtuales van en la subcarpeta Informes_lab_virtual/ (copia otro bloque visor-pdf) -->
+      <!-- ============================================================
+           SECCIÓN 2: INFORMES VIRTUALES
+           ============================================================ -->
+      <h2
+        style="
+          margin-top: 4rem;
+          margin-bottom: 1.5rem;
+          color: #2c3e50;
+          border-left: 5px solid #7b2cbf;
+          padding-left: 10px;
+        "
+      >
+        <i class="fas fa-laptop-code"></i> Informes de Laboratorio Virtuales
+      </h2>
 
-        <!-- ===== EJEMPLOS DE BLOQUES (quita las marcas de comentario para usarlos) =====
+      <!-- INFORME VIRTUAL 1 -->
+      <div class="taller-card">
+        <h3>Informe Virtual N° 1: Ley cero de la termodinámica</h3>
 
-        TÍTULO + TEXTO:
-        <div class="bloque-texto">
-          <h4>Título del apartado</h4>
-          <p>Escribe aquí tu párrafo.</p>
+        <div class="taller-header-info">
+          <p>
+            <strong>Integrantes:</strong> Cando Cando Elber Saul; Gabriela
+            Estefanía Quishpi Sarabia; Ruth Maribel Suárez Saula
+          </p>
+          <p><strong>Docente:</strong> Dra. Narcisa de Jesús Sánchez Salcán</p>
         </div>
 
-        PDF VISIBLE EN LA PÁGINA (copia el PDF a esta misma carpeta):
         <div class="visor-pdf">
-          <iframe src="nombre-del-archivo.pdf" title="Descripción del PDF"></iframe>
-          <div class="pdf-acciones">
-            <span>¿No se ve el documento en tu celular?</span>
-            <a href="nombre-del-archivo.pdf" download><i class="fas fa-download"></i> Descargar PDF</a>
-            <a href="nombre-del-archivo.pdf"><i class="fas fa-up-right-from-square"></i> Abrir en pantalla completa</a>
+          <iframe
+            src="Informes_lab_virtual/Informe_laboratorio_virtual-1.pdf"
+            title="Informe Virtual 1"
+            style="width: 100%; height: 500px"
+          ></iframe>
+          <div
+            class="pdf-acciones"
+            style="
+              margin-top: 0.5rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              font-size: 0.85rem;
+            "
+          >
+            <a
+              href="Informes_lab_virtual/Informe_laboratorio_virtual-1.pdf"
+              download
+              ><i class="fas fa-download"></i> Descargar PDF</a
+            >
+            <a
+              href="Informes_lab_virtual/Informe_laboratorio_virtual-1.pdf"
+              target="_blank"
+              ><i class="fas fa-up-right-from-square"></i> Pantalla completa</a
+            >
           </div>
         </div>
-
-        IMAGEN (guárdala en una subcarpeta imagenes/ de esta carpeta):
-        <figure class="bloque-imagen">
-          <img src="imagenes/mi-foto.png" alt="Descripción de la imagen" />
-          <figcaption>Figura 1. Descripción de la imagen.</figcaption>
-        </figure>
-
-        VIDEO DE YOUTUBE (cambia ID_DEL_VIDEO):
-        <div class="bloque-video">
-          <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO" allowfullscreen></iframe>
-        </div>
-
-        LÍNEA SEPARADORA:
-        <hr class="separador" />
-        ===== -->
       </div>
     </main>
 
